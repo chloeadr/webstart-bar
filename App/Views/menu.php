@@ -14,8 +14,24 @@
 </head>
 
 <body>
-    <h1>Menus</h1>
-        <h2><?php echo $menu ?></h2>
+    <?php
+      foreach ($Menus as $menu) {
+        echo "<h2>".$menu["title"]."</h2></br>";
+        $categories = $menu["categories"];
+        
+         foreach ($categories as $category) {
+         $drinks = $category["drinks"];
+         echo "<h4>".$category["category"]."</h4></br>";
+         echo "<table>";
+         $drinks = $category["drinks"];
+         foreach ($drinks as $drink) {
+           echo "<tr><td>".$drink["drink_name"]."</td><td>".$drink["description"]."</td></tr>";
+         }
+         echo "</table>";
+              
+         }
+      }
+    ?>
 </body>
 
 </html>
