@@ -14,10 +14,24 @@ abstract class Controller  {
             print_r($pdo->errorInfo());
          }
 
-         $state->execute();
+        $state->execute();
         $results = $state->fetchAll();
         
         return $results;
+    }
+
+    protected function updateData(string $sql){
+
+        $pdo = new \PDO('mysql:dbname=webstart_bar;host=localhost', 'root','');
+        $pdo->setAttribute(\PDO::ATTR_EMULATE_PREPARES,false);
+        $state = $pdo->prepare($sql);
+        
+        if (!$state) {
+            print_r($pdo->errorInfo());
+        }
+
+        $state->execute();
+        
     }
 
     protected function render($variables, $template) {

@@ -46,15 +46,20 @@
             </div>
             <div class="row p-5">
                     <?php
-                    echo "<h3>".$menu['name']."</h3>";
-                    $categories = $menu["alldrinks"];
-                      foreach ($categories as $category) { 
-                          $drinks = $category["drinks"];
-                          echo "<h4 class=\"product\">".$category["category"]."</h4>";
-                          $drinks = $category["drinks"];
-                          foreach ($drinks as $drink) {
-                            echo "<a href=\"?page=drink&drink=".$drink["drink_id"]."\">".$drink["drink_name"]."</a>";
-                          }   
+                      foreach ($menus as $menu) { ?>
+                        <div class="col-6">
+                          <?php
+                            echo "<a href=\"?page=menu&menu=".$menu["id"]."\">";
+                          ?>
+                          <div class="card">
+                            <?php
+                              echo "<img src=\"img/".$menu["picture"]."\" />";
+                              echo "<h3>".$menu["name"]."</h3>"; 
+                            ?>
+                          </a>
+                          </div>
+                        </div>
+                      <?php
                       }
                     ?>
                 </div>

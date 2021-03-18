@@ -4,25 +4,15 @@ namespace App\Controller;
 
 class MenuController extends Controller {
     public function show(){
+        $menuId = $_GET['menu'];
+        $menu = $this->getData('SELECT name FROM menu WHERE id='.$menuId);
+        $drinks = $this->getDrinks($menuId);
+        $arrayToTemplate['menu'] = ['name' => $menu[0]['name'], 'alldrinks'=> $drinks];
 
-        $sql = "SELECT id, name as menu_name
-        FROM `menu`
-        WHERE `menu`.`active` = 1 "; 
-  
-        $menus = $this->getData($sql);
 
-        $arrayToTemplate["Menus"] = array();
-	    foreach ($menus as $menu) {
-		    $menuTitle = $menu['menu_name'];
-		    $drinks = $this->getDrinks($menu['id']);
-		    //var_dump($drinks);
-		    $menuContent = ['title' => $menuTitle, 'categories' => $drinks];
-		    array_push($arrayToTemplate["Menus"], $menuContent);
-        } 
-
-        /* echo '<pre>';
+        echo '<pre>';
         var_dump($arrayToTemplate);
-        echo '</pre>'; */
+        echo '</pre>';
 
         $this->render($arrayToTemplate, 'menu');
         
@@ -34,7 +24,7 @@ class MenuController extends Controller {
 		$drinks_menu = array();
 		foreach($categories as $category) {
 			$category_id = $category["id"];
-			$sql = "SELECT  distinct `drink`.`name` as drink_name, description
+			$sql = "SELECT  distinct `drink`.`id` as drink_id, `drink`.`name` as drink_name
 			FROM `drink`, `menu_has_drink`, `category`
 			WHERE `menu_has_drink`.`drink_id`= `drink`.`id`
 			AND `menu_has_drink`.`menu_id` =".$menuId."

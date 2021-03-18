@@ -45,18 +45,24 @@
                 <div class="bruce col-12"></div>
             </div>
             <div class="row p-5">
+                <form name="form_menus" method="post" action="/?page=menuEdit&action=save">
                     <?php
-                    echo "<h3>".$menu['name']."</h3>";
-                    $categories = $menu["alldrinks"];
-                      foreach ($categories as $category) { 
-                          $drinks = $category["drinks"];
-                          echo "<h4 class=\"product\">".$category["category"]."</h4>";
-                          $drinks = $category["drinks"];
-                          foreach ($drinks as $drink) {
-                            echo "<a href=\"?page=drink&drink=".$drink["drink_id"]."\">".$drink["drink_name"]."</a>";
-                          }   
+                      foreach ($menus as $menu) { 
+                        $active_status = '';
+
+                        if ($menu['active'] == 1) {
+                            $active_status = 'checked=checked';
+                        } ?>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="Active_<?php echo $menu['id']; ?>" value="<?php echo $menu['id']; ?>" id="menu<?php echo $menu['id']; ?>" <?php echo $active_status; ?>>
+                            <label class="form-check-label" for="menu<?php echo $menu['id']; ?>"><?php echo $menu['name']; ?></label>
+                        </div>
+                      <?php
                       }
                     ?>
+                    <button type="submit" value="save" class="btn btn-primary">Submit</button>
+                </form>
+                    
                 </div>
             </div>
         </div>

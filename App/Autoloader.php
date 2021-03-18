@@ -2,7 +2,7 @@
 
 namespace App;
 
-class Autoloader{
+class Autoloader {
 
     static function register(){
 

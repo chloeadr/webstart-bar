@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Fredoka One', cursive;
+}
+
+.home {
+    background-image: url(img/home.png);
+}
+
+.drinks {
+    background-image: url(img/drinks.png);
+}
+
+.agenda {
+    background-image: url(img/agenda.png);
+}
+
+.contact {
+    background-image: url(img/contact.png);
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    background-image: url(img/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.logo:hover {
+    background-image: url(img/logoHover.png);
+}
+
+.menuItem {
+    color: black;
+    font-size: 25px;
+    position: relative;
+}
+
+.menuItem:hover {
+    color:black;
+    text-decoration: none;
+}
+
+.menuItem:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid black;
+    transition: 0.4s;
+}
+
+.menuItem:hover:after {
+    width: 100%;
+}
+
+h1 {
+    font-size: 98px;
+    margin-bottom: 0px;
+}
+
+.baseline {
+    font-size: 25px;
+}
+
+.fas {
+    font-size: 50px;
+}
+
+.bruce {
+    height: 24px;
+    background-color: #4ECDC4;
+}
+
+.main {
+    background-image: url(img/bg.png);
+    background-size: contain;
+}
+
+h3 {
+    color: #2C9A93;
+    font-size: 50px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.bodyText {
+    color: #195854;
+    font-size: 17px;
+}
+
+.btn-primary {
+    background-color: #2C9A93;
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.btn-primary:hover {
+    background-color: #4ECDC4;
+}
+
+.footer {
+    background-color: #4ECDC4;
+    font-size: 17px;
+}
+
+.footerTitle {
+    color: #195854;
+}
+
+.socialMediaLink {
+    color: #195854;
+    font-size: 35px;
+}
+
+.socialMediaLink:hover {
+    color: white;
+}
+
+.fineprint {
+    color: white;
+}
+
+.subtitle {
+    color: #2C9A93;
+    font-size: 30px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.product {
+    color: #195854;
+    font-size: 30px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.bruceLeft {
+    color: #4ECDC4;
+    border-right-style: solid;
+    border-width: 6px;
+}
+
+.bruceRight {
+    color: #4ECDC4;
+    border-left-style: solid;
+    border-width: 6px;
+}
+
+.descr {
+    color: #195854;
+    font-size: 17px;
+}
+
+.btn-dark {
+    background-color: #2C9A93;
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    border: none;
+    border-radius: 10px 10px 0px 0px;
+    padding: 12px;
+}
+
+.btn-dark:hover {
+    background-color: #4ECDC4;
+    color: #195854;
+}
+
+.btn-light {
+    background-color: #4ECDC4;
+    color: #195854;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    border: none;
+    border-radius: 10px 10px 0px 0px;
+    padding: 12px;
+}
+
+.btn-light:hover {
+    background-color: #2C9A93;
+    color: white;
+}
+
+.card {
+    background-color: #B8EBE7;
+    border-radius: 10px;
+    border: none;
+}
+
+.date {
+    color: #195854;
+    font-size: 25px;
+}
