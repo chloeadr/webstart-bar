@@ -38,7 +38,7 @@
                 </h1>
             </div>
             <div class="row d-flex flex-column justify-content-center align-items-center m-4">
-                <p class="baseline mb-3">See our menus</p>
+                <p class="baseline mb-3">See what's on this menu</p>
                 <img src="img/arrow.svg" />
             </div>
         </div>
@@ -46,7 +46,7 @@
             <div class="row">
                 <div class="bruce col-12"></div>
             </div>
-            <div class="row p-5 pb-4">
+            <div class="row p-5 pb-5">
                 <div class="col-12 justify-content-center align-items-center">
                     <?php
                     $categories = $menu["alldrinks"];

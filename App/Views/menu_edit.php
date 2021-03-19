@@ -55,7 +55,7 @@
                         } ?>
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" name="Active_<?php echo $menu['id']; ?>" value="<?php echo $menu['id']; ?>" id="menu<?php echo $menu['id']; ?>" <?php echo $active_status; ?>>
-                            <label class="form-check-label" for="menu<?php echo $menu['id']; ?>"><?php echo $menu['name']; ?></label>
+                            <label class="form-check-label bodyText" for="menu<?php echo $menu['id']; ?>"><?php echo $menu['name']; ?></label>
                         </div>
                       <?php
                       }

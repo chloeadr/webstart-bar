@@ -12,9 +12,12 @@ class WaiterController extends Controller {
 	    foreach ($waiters as $waiter) {
 		    $firstName = $waiter['first_name'];
             $lastName = $waiter['last_name'];
+            $picture = $waiter['picture'];
             $age = $waiter['age'];
             $presentation = $waiter['presentation'];
-		    $waiter = ['firstName' => $firstName, 'lastName' => $lastName, 'age' => $age, 'presentation' => $presentation];
+            $lunch = $waiter['lunch'];
+            $dinner = $waiter['dinner'];
+		    $waiter = ['firstName' => $firstName, 'lastName' => $lastName, 'picture' => $picture, 'age' => $age, 'presentation' => $presentation, 'lunch' => $lunch, 'dinner' => $dinner];
 		    array_push($arrayToTemplate["waiters"], $waiter);
         } 
 
