@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
-        <title>Drinks | Dungeons & Bourbon</title>
+        <title>Our menus | Dungeons & Bourbon</title>
     </head>
 
     <body>
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="row justify-content-center text-center">
-                <h1>Drinks</h1>
+                <h1>Our menus</h1>
             </div>
             <div class="row d-flex flex-column justify-content-center align-items-center m-4">
                 <p class="baseline mb-3">See our menus</p>
@@ -51,9 +51,9 @@
                           <?php
                             echo "<a href=\"?page=menu&menu=".$menu["id"]."\">";
                           ?>
-                          <div class="card">
+                          <div class="card menuCard d-flex flex-column justify-content-center align-items-center p-5 mb-5">
                             <?php
-                              echo "<img src=\"img/".$menu["picture"]."\" />";
+                              echo "<img src=\"img/".$menu["picture"]."\" class=\"w-100 mb-3\" />";
                               echo "<h3>".$menu["name"]."</h3>"; 
                             ?>
                           </a>
@@ -63,6 +63,11 @@
                       }
                     ?>
                 </div>
+              <div class="row d-flex justify-content-center pb-5">
+                <a href="/?page=menuEdit">
+                  <button type="button" class="btn btn-primary">Edit active menus</button>
+                </a>
+              </div>
             </div>
         </div>
         <div class="container-fluid footer p-5">

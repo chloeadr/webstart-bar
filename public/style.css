@@ -23,8 +23,8 @@
     background-image: url(img/agenda.png);
 }
 
-.contact {
-    background-image: url(img/contact.png);
+.editMenus {
+    background-image: url(img/menuEdit.png);
 }
 
 .logo {
@@ -136,14 +136,30 @@ h3 {
 
 .subtitle {
     color: #2C9A93;
-    font-size: 30px;
     font-family: 'Fredoka One', cursive;
 }
 
 .product {
     color: #195854;
-    font-size: 30px;
     font-family: 'Fredoka One', cursive;
+}
+
+.productLink {
+    position: relative;
+}
+
+.productLink:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid #195854;
+    transition: 0.4s;
+}
+
+.productLink:hover:after {
+    width: 100%;
 }
 
 .bruceLeft {
@@ -178,6 +194,17 @@ h3 {
     color: #195854;
 }
 
+.btn-dark:active {
+    background-color: #4ECDC4;
+    color: #195854;
+}
+
+.btn-dark:focus {
+    border: none;
+    background-color: #4ECDC4;
+    color: #195854;
+}
+
 .btn-light {
     background-color: #4ECDC4;
     color: #195854;
@@ -193,13 +220,32 @@ h3 {
     color: white;
 }
 
+.btn-light:active {
+    background-color: #2C9A93;
+    color: white;
+}
+
+.btn-light:focus {
+    border: none;
+    background-color: #2C9A93;
+    color: white;
+}
+
 .card {
     background-color: #B8EBE7;
     border-radius: 10px;
     border: none;
 }
 
+.menuCard:hover {
+    background-color: white;
+}
+
 .date {
     color: #195854;
     font-size: 25px;
+}
+
+a:hover {
+    text-decoration: none;
 }

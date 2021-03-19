@@ -73,7 +73,7 @@
                         <h3 class="mb-5">The menu</h3>
                         <p class="bodyText mb-5">Surprise! We don’t only serve bourbon! We’re open throughout the day, we offer soft drinks as well as stronger ones, and we even have cake and snacks. 
                             Whether you’re looking for a 4pm hot chocolate (with marshmallows, obviously!) or a 9pm vodka martini (shaken not stirred), Dungeons & Bourbon has got you covered!</p>
-                        <a href="/?page=menu">
+                        <a href="/?page=menuList">
                             <button type="button" class="btn btn-primary">See the menu</button>
                         </a>
                     </div>

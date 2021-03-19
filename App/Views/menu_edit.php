@@ -7,11 +7,11 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
-        <title>Drinks | Dungeons & Bourbon</title>
+        <title>Edit active menus | Dungeons & Bourbon</title>
     </head>
 
     <body>
-        <div id="intro" class="container-fluid d-flex flex-column justify-content-between align-items-center header drinks p-5">
+        <div id="intro" class="container-fluid d-flex flex-column justify-content-between align-items-center header p-5" style="background-image: url('img/menuEdit.png');">
             <div class="row w-100">
                 <div class="col-3 d-flex justify-content-start p-0">
                     <a href="/?page=home" title="Dungeons & Bourbon">
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="row justify-content-center text-center">
-                <h1>Drinks</h1>
+                <h1>Edit active menus</h1>
             </div>
             <div class="row d-flex flex-column justify-content-center align-items-center m-4">
                 <p class="baseline mb-3">See our menus</p>
@@ -60,7 +60,7 @@
                       <?php
                       }
                     ?>
-                    <button type="submit" value="save" class="btn btn-primary">Submit</button>
+                    <button type="submit" value="save" class="btn btn-primary mt-5">Submit</button>
                 </form>
                     
                 </div>

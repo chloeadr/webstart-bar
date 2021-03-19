@@ -5,14 +5,14 @@ namespace App\Controller;
 class MenuController extends Controller {
     public function show(){
         $menuId = $_GET['menu'];
-        $menu = $this->getData('SELECT name FROM menu WHERE id='.$menuId);
+        $menu = $this->getData('SELECT name, bg FROM menu WHERE id='.$menuId);
         $drinks = $this->getDrinks($menuId);
-        $arrayToTemplate['menu'] = ['name' => $menu[0]['name'], 'alldrinks'=> $drinks];
+        $arrayToTemplate['menu'] = ['name' => $menu[0]['name'], 'bg' => $menu[0]['bg'], 'alldrinks'=> $drinks];
 
 
-        echo '<pre>';
+        /*echo '<pre>';
         var_dump($arrayToTemplate);
-        echo '</pre>';
+        echo '</pre>';*/
 
         $this->render($arrayToTemplate, 'menu');
         
@@ -24,7 +24,7 @@ class MenuController extends Controller {
 		$drinks_menu = array();
 		foreach($categories as $category) {
 			$category_id = $category["id"];
-			$sql = "SELECT  distinct `drink`.`id` as drink_id, `drink`.`name` as drink_name
+			$sql = "SELECT  distinct `drink`.`id` as drink_id, `drink`.`name` as drink_name, `drink`.`price` as drink_price
 			FROM `drink`, `menu_has_drink`, `category`
 			WHERE `menu_has_drink`.`drink_id`= `drink`.`id`
 			AND `menu_has_drink`.`menu_id` =".$menuId."

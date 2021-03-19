@@ -7,11 +7,11 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
-        <title>Drinks | Dungeons & Bourbon</title>
+        <title><?php echo $menu['name'] ?> | Dungeons & Bourbon</title>
     </head>
 
     <body>
-        <div id="intro" class="container-fluid d-flex flex-column justify-content-between align-items-center header drinks p-5">
+        <div id="intro" class="container-fluid d-flex flex-column justify-content-between align-items-center header p-5" style="background-image: url('img/<?php echo $menu['bg'] ?>');">
             <div class="row w-100">
                 <div class="col-3 d-flex justify-content-start p-0">
                     <a href="/?page=home" title="Dungeons & Bourbon">
@@ -33,7 +33,9 @@
                 </div>
             </div>
             <div class="row justify-content-center text-center">
-                <h1>Drinks</h1>
+                <h1>
+                    <?php echo $menu['name'] ?>
+                </h1>
             </div>
             <div class="row d-flex flex-column justify-content-center align-items-center m-4">
                 <p class="baseline mb-3">See our menus</p>
@@ -44,16 +46,25 @@
             <div class="row">
                 <div class="bruce col-12"></div>
             </div>
-            <div class="row p-5">
+            <div class="row p-5 pb-4">
+                <div class="col-12 justify-content-center align-items-center">
                     <?php
-                    echo "<h3>".$menu['name']."</h3>";
                     $categories = $menu["alldrinks"];
                       foreach ($categories as $category) { 
                           $drinks = $category["drinks"];
-                          echo "<h4 class=\"product\">".$category["category"]."</h4>";
+                          echo "<div class=\"row d-flex justify-content-center align-items-center mt-4\">
+                            <h3 class=\"subtitle\">".$category["category"]."</h3>
+                          </div>";
                           $drinks = $category["drinks"];
                           foreach ($drinks as $drink) {
-                            echo "<a href=\"?page=drink&drink=".$drink["drink_id"]."\">".$drink["drink_name"]."</a>";
+                            echo "<div class=\"row d-flex justify-content-center align-items-center\">
+                                <div class=\"col-6 d-flex justify-content-center\">
+                                    <a href=\"?page=drink&drink=".$drink["drink_id"]."\"><h3 class=\"product productLink\">".$drink["drink_name"]."</h3></a>
+                                </div>
+                                <div class=\"col-6 d-flex justify-content-center\">
+                                    <h3 class=\"product\">".$drink["drink_price"]."€</h3>
+                                </div>
+                            </div>";
                           }   
                       }
                     ?>
